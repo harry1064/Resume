@@ -1,102 +1,162 @@
-\documentclass[a4paper]{article}
+\documentclass[letterpaper,11pt]{article}
 
-%% Language and font encodings
-\usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage[T1]{fontenc}
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{tabu}
+\usepackage{hologo}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black 
+    %urlcolor=mygreylink     % can put red here to better visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.40}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-%% Sets page size and margins
-\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
 
-%% Useful packages
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage[colorinlistoftodos]{todonotes}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[3]{
+	\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+			\textbf{#1} & #2\\
+			{#3} \\
+	\end{tabular*}\vspace{-6pt}
+}
 
-\title{Your Paper}
-\author{You}
+\newcommand{\ressubsubheading}[2]{
+	\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+			\textit{#1} & \textit{#2} \\
+	\end{tabular*}\vspace{-6pt}
+}
 
 \begin{document}
-\maketitle
+\newcommand{\mywebheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{\Huge \bfseries Harpreet Singh} 
+	& \href{mailto:harry.singh1064@gmail.com}{\normalsize \bfseries Email:- \mdseries harry.singh1064@gmail.com}\\
+	 & \href{tel:+919890359411}{\normalsize \bfseries Phone:- \mdseries +91-9890359411}\\
+	 & \href{https://github.com/harry1064}{\normalsize \bfseries GitHub:- \mdseries www.github.com/harry1064}\\
+	\end{tabular*}
+\\}
+% change header source here
+\mywebheader
 
-\begin{abstract}
-Your abstract.
-\end{abstract}
-
-\section{Introduction}
-
-Your introduction goes here! Some examples of commonly used commands and features are listed below, to help you get started. If you have a question, please use the help menu (``?'') on the top bar to search for help or ask us a question. 
-
-\section{Some examples to get started}
-
-\subsection{How to add Comments}
-
-Comments can be added to your project by clicking on the comment icon in the toolbar above. % * <john.hammersley@gmail.com> 2014-09-03T09:54:16.211Z:
-%
-% Here's an example comment!
-%
-To reply to a comment, simply click the reply button in the lower right corner of the comment, and you can close them when you're done.
-
-\subsection{How to include Figures}
-
-First you have to upload the image file from your computer using the upload link the project menu. Then use the includegraphics command to include it in your document. Use the figure environment and the caption command to add a number and a caption to your figure. See the code for Figure \ref{fig:frog} in this section for an example.
-
-\begin{figure}
-\centering
-\includegraphics[width=0.3\textwidth]{frog.jpg}
-\caption{\label{fig:frog}This frog was uploaded via the project menu.}
-\end{figure}
-
-\subsection{How to add Tables}
-
-Use the table and tabular commands for basic tables --- see Table~\ref{tab:widgets}, for example. 
-
-\begin{table}
-\centering
-\begin{tabular}{l|r}
-Item & Quantity \\\hline
-Widgets & 42 \\
-Gadgets & 13
-\end{tabular}
-\caption{\label{tab:widgets}An example table.}
-\end{table}
-
-\subsection{How to write Mathematics}
-
-\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-\[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-      = \frac{1}{n}\sum_{i}^{n} X_i\]
-denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
-
-
-\subsection{How to create Sections and Subsections}
-
-Use section and subsections to organize your document. Simply use the section and subsection buttons in the toolbar to create them, and we'll handle all the formatting and numbering automatically.
-
-\subsection{How to add Lists}
-
-You can make lists with automatic numbering \dots
-
-\begin{enumerate}
-\item Like this,
-\item and like this.
-\end{enumerate}
-\dots or bullet points \dots
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{\Large Professional Summary \normalsize \bfseries (1.5+ years of experience in developing iOS apps in startups)}
+{ \footnotesize
 \begin{itemize}
-\item Like this,
-\item and like this.
+	\resitem{Software Developer at \href{http://quintoapp.com}{\bfseries Quinto App}, Pune at present. Previous: \href{http://42works.net/} {\bfseries  42Works}, Mohali,India }
+	\resitem{Hands-on experience in Agile Software Development Life Cycle: Project conceptualisation and design, Implementation,
+quality assurance and maintenance of the product}
+	\resitem{Experience at being single point of contact for developers and team communication}
+	\resitem{Strong interpersonal and communication skills, with good logical and analytical ability}
 \end{itemize}
-
-\subsection{How to add Citations and a References List}
-
-You can upload a \verb|.bib| file containing your BibTeX entries, created with JabRef; or import your \href{https://www.overleaf.com/blog/184}{Mendeley}, CiteULike or Zotero library as a \verb|.bib| file. You can then cite entries from it, like this: \cite{greenwade93}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|.
-
-You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
-
-We hope you find Overleaf useful, and please let us know if you have any feedback using the help menu above --- or use the contact form at \url{https://www.overleaf.com/contact}!
-
-\bibliographystyle{alpha}
-\bibliography{sample}
+} %End of professional summary
+\vspace{5mm} 
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work Experience}
+	\begin{itemize}
+	\resitem {{\bfseries iOS Developer,\href{http://quintoapp.com} {Quinto}, Pune, India (Sep 2015-Present)}}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{Responsible for designing and developing the \href{https://itunes.apple.com/in/app/id912305961}{\bfseries Quinto iOS App} from scratch}
+					\resitem{Responsible for improvement and bug fixes for the app: current version: v3.x.x}
+				\end{itemize}
+				}
+	\resitem {{\bfseries iOS Developer, \href{http://42works.net/}{\bfseries 42Works}, Mohali, India (April 2015-August 2015)}}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{Responsible for understanding and analysing clients business requirements and converting them on iPhone and iPad}
+					\resitem{Responsible for developing iOS SDK, writing Unit Tests}
+					\resitem{Responsible for handling iOS apps release cycle on App Store}
+				\end{itemize}
+				}
+\end{itemize}  % End Work Experience list
+\vspace{5mm} 
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Projects}
+	\begin{itemize}
+    \item 
+			\ressubheading{\href{https://itunes.apple.com/in/app/quinto-discover-best-food/id912305961?mt=8}{Quinto – Food and Restaurant Recommendations}}{}{Automated chat to get the best food and restaurant recommendations in Pune.}
+		\item 
+			\ressubheading{\href{https://github.com/harry1064/HPSCalendarView}{HPSCalendarView}}{}{Easy to use \href{https://github.com/harry1064/HPSCalendarView}{\textbf{cocoapods}} library for adding Calendar UI in  IOS apps.}
+		\item
+			\ressubheading{\href{https://www.npmjs.com/package/apns-http2}{APNS npm package for push notification}}{}{Node.Js module written in  to send push notification to APNS also used in  Quinto App hosted on AWS}
+		\item
+			\ressubheading{Quinto Facebook chatbot server}{QuintoApp}{Server written in Node.Js to auto-respond to Quinto Audience on Facebook page}	
+		\item
+			\ressubheading{\href{ https://itunes.apple.com/in/app/howbig-app/id982763195?mt=8}{HowBig App (iOS)}}{Freelance Project}{Developed the app in span of one month and handle over to the dealing company.}	
+	   \item
+			\ressubheading{\href{  https://itunes.apple.com/in/app/rock-spring-contracting/id1026561788?mt=8}{Rock Spring Contracting (iOS)}}{42Works}{Developed Rock Spring Contracting iOS app for the {\href{http://www.rockspringcontracting.com/}{\textbf{RockSpring Contracting, LLC }}}}                                            \item
+			\ressubheading{\href{ https://itunes.apple.com/nz/app/krumbb/id1001546648?mt=8}{Krumbb (iOS)}}{42Works}{Location-based social platform for sharing and spotting amazing food all over the world.}	
+		\item
+			\ressubheading{\href{ https://itunes.apple.com/us/app/pegasus-realty/id948309965?mt=8}{Pegasus Realty(IOS)}}{Training Project}{Developed an real estate IOS app to facilitate life of broker.}
+\end{itemize}  % End project
+\vspace{5mm} 
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{\Large Tools and Technologies}
+{ \footnotesize
+\begin{center}
+	\begin{tabu} to 1\textwidth { | X[c] | X[c] | }
+		 \hline
+			 Programming (in order of proficiency) & Objective-C, Swift, C, Node.js,Python, Java, \hologo{LaTeX}\\
+		 \hline
+			 Unit Test and UI Automation  & XCTest, OCMock, KIF \\
+		\hline
+			Databases  & Core Data, SQLite, SQL \\
+		\hline
+			Development Software and Environment  & Xcode, Vagrant, AWS \\
+		\hline
+			Version Contro  & Git \\
+		\hline
+			Code Review System &  GitHub \\
+		\hline
+			Operating Systems  & OS X, UNIX/Linux(Ubuntu, Fedora), Windows \\
+		\hline
+	\end{tabu}
+\end{center}
+}%End of Tools and Technologies
+\vspace{5mm} 
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{\Large Educational Qualifications}
+\begin{center}
+	\begin{tabu} to 1\textwidth { | X[c] | X[c] | X[c] | }
+		\hline
+			\textbf{Year}  & \textbf{Degree} & \textbf{Institution / School}\\
+		\hline
+			 2014  & Bachelor of Technology (CSE) & \href{http://punjabiuniversity.ac.in/pbiuniweb/pages/teaching/ucoe.htm/}{\textbf{University College of Engineering (UCoE) , Punjabi University Campus, Patiala}}\\
+		\hline
+				2010  & 12th CBSE Board  & \href{http://www.gmsss19.in/}{\textbf {Govt. Model Sr. Sec. School, Sector - 19-C, Chandigarh}} \\
+		\hline
+				2008  & 10th CBSE Board & \href{http://www.gmsss20d.com/}{ \textbf{Government Model Senior Secondary School 20-D, Chandigarh} }\\
+		\hline
+	\end{tabu}
+\end{center} %End of Educational Qualifications 
+\vspace{5mm} 
+\resheading{References}
+\begin{itemize}
+	\item
+	\ressubheading{Available if Required}{}{\scriptsize {Contact me over \href{mailto:harry.singh1064@gmail.com}{\textbf{Email}}}}
+\end{itemize} %End of References
 
 \end{document}
+%\newpage
